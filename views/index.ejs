@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gen 1 Pokemon</title>
+    <style>
+        body {
+            text-align: center;
+        }
+        
+    </style>
+</head>
+<body>
+    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/98/International_Pok%C3%A9mon_logo.svg/1200px-International_Pok%C3%A9mon_logo.svg.png" style="width: 200px;">
+    <h1>Gotta Catch Em' All</h1>
+    <button onclick = "window.location.href='http://localhost:3000/pokemon/new';">Add New Pokemon</button>    
+    <br>
+    <br>
+    <% for(let i = 0; i < pokemon.length; i++){ %>
+        <a href="/pokemon/<%=i%>" style="text-decoration: none;">
+        <img style="height:125px; width: 125px" src= <%= pokemon[i].img %>>
+        </a>
+    <% } %>
+</body>
+</html>
